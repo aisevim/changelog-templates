@@ -1,0 +1,30 @@
+{
+  "name": "changelog-templates",
+  "version": "0.0.0",
+  "description": "Changelog templates",
+  "license": "MIT",
+  "author": "aisevim <a.aydnlp.pro@gmail.com>",
+  "volta": {
+    "node": "20.10.0"
+  },
+  "packageManager": "pnpm@8.10.5",
+  "bugs": {
+    "url": "https://github.com/aisevim/changelog-templates/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aisevim/changelog-templates.git"
+  },
+  "keywords": [],
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "changelog": "auto-changelog --stdout --commit-limit false"
+  },
+  "devDependencies": {
+    "auto-changelog": "^2.4.0",
+    "eslint": "^8.56.0",
+    "eslint-config-symmetrys": "^0.9.2"
+  }
+}
