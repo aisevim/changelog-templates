@@ -4,64 +4,27 @@ export function useOctokit({ owner, repo }) {
   const octokit = new Octokit({})
 
   async function getCommits() {
-    let response
-    let commits = []
-    let page = 1
-
-    do {
-      response = await octokit.repos.listCommits({
-        owner,
-        repo,
-        per_page: 100,
-        page,
-        // until: '2021-04-01T00:00:00Z',
-      })
-
-      commits = commits.concat(response.data)
-      page++
-    } while (response.data.length === 100)
-
-    return commits
+    return octokit.paginate(octokit.repos.listCommits, {
+      owner,
+      repo,
+      per_page: 100,
+    })
   }
 
   async function getTags() {
-    let response
-    let tags = []
-    let page = 1
-
-    do {
-      response = await octokit.repos.listTags({
-        owner,
-        repo,
-        per_page: 100,
-        page,
-      })
-
-      tags = tags.concat(response.data)
-      page++
-    } while (response.data.length === 100)
-
-    return tags
+    return octokit.paginate(octokit.repos.listTags, {
+      owner,
+      repo,
+      per_page: 100,
+    })
   }
 
   async function getReleases() {
-    let response
-    let releases = []
-    let page = 1
-
-    do {
-      response = await octokit.repos.listReleases({
-        owner,
-        repo,
-        per_page: 100,
-        page,
-      })
-
-      releases = releases.concat(response.data)
-      page++
-    } while (response.data.length === 100)
-
-    return releases
+    return octokit.paginate(octokit.repos.listReleases, {
+      owner,
+      repo,
+      per_page: 100,
+    })
   }
 
   async function fetchData() {
