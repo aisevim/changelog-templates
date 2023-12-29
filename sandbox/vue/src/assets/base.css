@@ -1,0 +1,7 @@
+body {
+	min-height: 100vh;
+	color: rgb(230, 237, 243);
+	background-color: rgb(13, 17, 23);
+	line-height: 1.6;
+	font-family: BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
