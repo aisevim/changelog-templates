@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "@octokit/rest": "^20.0.2",
-    "conventional-commits-parser": "^5.0.0"
+    "conventional-commits-parser": "^5.0.0",
+    "turndown-plugin-gfm": "^1.0.2"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
