@@ -1,44 +1,39 @@
 <script setup>
-import hljs from 'highlight.js'
-import markdownit from 'markdown-it'
-import { full as emoji } from 'markdown-it-emoji'
-import mark from 'markdown-it-mark'
-import { h, onMounted, ref, computed } from 'vue' // https://highlightjs.org
-import twemoji from 'twemoji'
+import { Octokit } from '@octokit/rest'
+import { marked } from 'marked'
+import markedAlert from 'marked-alert'
+import { markedEmoji } from 'marked-emoji'
+import { onMounted, ref } from 'vue'
 
 import { generateMarkdown } from '../../../src/index.js'
 import Markdown from './Markdown.vue'
 
-const markdown = ref()
+const markdownHTML = ref('')
 
 onMounted(async () => {
-  const md = markdownit({
-    html: true,
-    linkify: true,
-    typographer: true,
-    // highlight(str, lang) {
-    //   console.log(lang)
-    //   if (lang && hljs.getLanguage(lang)) {
-    //     try {
-    //       return `<pre><code class="hljs">${
-    //            hljs.highlight(str, { language: lang, ignoreIllegals: true }).value
-    //            }</code></pre>`
-    //     } catch (__) {}
-    //   }
+  const octokit = new Octokit()
+  const res = await octokit.rest.emojis.get()
+  const emojis = res.data
+  const options = {
+    emojis,
+    unicode: false,
+  }
 
-    //   return `<pre><code class="hljs">${ md.utils.escapeHtml(str) }</code></pre>`
-    // },
+  const md = marked.use({
+    gfm: true,
+
   })
-    .use(emoji)
 
-  const markdownHTML = md.render(await generateMarkdown(Markdown))
-  markdown.value = h('div', { innerHTML: markdownHTML })
+  md.use(markedEmoji(options))
+  md.use(markedAlert)
+
+  markdownHTML.value = md.parse(await generateMarkdown(Markdown))
 })
 </script>
 
 <template>
   <div class="container">
-    <Markdown />
+    <div v-html="markdownHTML" />
   </div>
 </template>
 

@@ -1,19 +1,12 @@
 <script setup></script>
 
 <template>
-  <p><strong>Advertisement :warning:</strong></p>
-  <ul>
-    <li>
-      <strong><a href="https://nodeca.github.io/pica/demo/">pica</a></strong> - high quality and fast image
-      resize in browser.
-    </li>
-    <li>
-      <strong><a href="https://github.com/nodeca/babelfish/">babelfish</a></strong> - developer friendly
-      i18n with plurals support and easy syntax.
-    </li>
-  </ul>
-  <p>You will like those projects!</p>
+  <h2>Horizontal Rules</h2>
   <hr>
+  <hr>
+  <hr>
+
+
   <h1>h1 Heading :clap:</h1>
   <h2>h2 Heading</h2>
   <h3>h3 Heading</h3>
@@ -22,26 +15,13 @@
   <h6>h6 Heading</h6>
 
 
-  <h2>Horizontal Rules</h2>
-  <hr>
-  <hr>
-  <hr>
-
-
-  <h2>Typographic replacements</h2>
-  <p>Enable typographer option to see result.</p>
-  <p>© © ® ® ™ ™ (p) (P) ±</p>
-  <p>test… test… test… test?.. test!..</p>
-  <p>!!! ??? ,  – —</p>
-  <p>“Smartypants, double quotes” and ‘single quotes’</p>
-
-
   <h2>Emphasis</h2>
   <p><strong>This is bold text</strong></p>
-  <p><strong>This is bold text</strong></p>
   <p><em>This is italic text</em></p>
-  <p><em>This is italic text</em></p>
-  <p><s>Strikethrough</s></p>
+  <p><s>This is Strikethrough text</s></p>
+  <p>This is <sub>Subscript</sub> text</p>
+  <p>This is <sup>Superscript</sup> text</p>
+  <p>This is <em>italic and <strong>strong and <s>Strikethrough and <sub>Subscript</sub></s></strong></em></p>
 
 
   <h2>Blockquotes</h2>
@@ -56,8 +36,35 @@
   </blockquote>
 
 
+  <h2>Code</h2>
+  <p>Inline <code>code</code></p>
+  <p>Indented code</p>
+
+  <pre><code>// Some comments
+line 1 of code
+line 2 of code
+line 3 of code
+</code></pre>
+
+  <p>Syntax highlighting</p>
+  <pre><code class="language-ruby">def foo(x)
+  return 3
+end
+</code></pre>
+
+  <pre class="hljs language-js"><code><span class="hljs-keyword">var</span> foo = <span class="hljs-keyword">function</span> (<span class="hljs-params">bar</span>) {
+  <span class="hljs-keyword">return</span> bar++;
+};
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">foo</span>(<span class="hljs-number">5</span>));
+</code></pre>
+
+  <pre class="language-js"><code>const foo = 'text';
+console.log(foo);</code></pre>
+
+
   <h2>Lists</h2>
-  <p>Unordered</p>
+  <h3>Unordered</h3>
   <ul>
     <li>Create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>
     <li>
@@ -79,7 +86,7 @@
     </li>
     <li>Very easy!</li>
   </ul>
-  <p>Ordered</p>
+  <h3>Ordered</h3>
   <ol>
     <li>
       <p>Lorem ipsum dolor sit amet</p>
@@ -97,35 +104,40 @@
       <p>…or keep all the numbers as <code>1.</code></p>
     </li>
   </ol>
-  <p>Start numbering with offset:</p>
+  <h3>Start numbering with offset:</h3>
   <ol start="57">
     <li>foo</li>
     <li>bar</li>
   </ol>
-
-
-  <h2>Code</h2>
-  <p>Inline <code>code</code></p>
-  <p>Indented code</p>
-  <pre><code>// Some comments
-line 1 of code
-line 2 of code
-line 3 of code
-</code></pre>
-  <p>Block code “fences”</p>
-  <pre><code class="hljs">Sample text here...
-</code></pre>
-  <p>Syntax highlighting</p>
-  <pre class="hljs language-js"><code><span class="hljs-keyword">var</span> foo = <span class="hljs-keyword">function</span> (<span class="hljs-params">bar</span>) {
-  <span class="hljs-keyword">return</span> bar++;
-};
-
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">foo</span>(<span class="hljs-number">5</span>));
-</code></pre>
-
-  <pre class="language-js"><code>const foo = 'text';
-console.log(foo);</code></pre>
-
+  <h3>Definition lists</h3>
+  <dl>
+    <dt>Term 1</dt>
+    <dd>Definition 1</dd>
+    <dt>Term 2</dt>
+    <dd>Definition 2a</dd>
+    <dd>Definition 2b</dd>
+  </dl>
+  <h3>Tasks List</h3>
+  <ul>
+    <li>
+      <input
+        checked=""
+        disabled=""
+        type="checkbox"
+      > foo
+      <ul>
+        <li><input disabled="" type="checkbox"> bar</li>
+        <li>
+          <input
+            checked=""
+            disabled=""
+            type="checkbox"
+          > baz
+        </li>
+      </ul>
+    </li>
+    <li><input disabled="" type="checkbox"> bim</li>
+  </ul>
 
   <h2>Tables</h2>
   <table>
@@ -154,36 +166,36 @@ console.log(foo);</code></pre>
   <table>
     <thead>
       <tr>
-        <th style="text-align:right">
+        <th align="right">
           Option
         </th>
-        <th style="text-align:right">
+        <th align="right">
           Description
         </th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="text-align:right">
+        <td align="right">
           data
         </td>
-        <td style="text-align:right">
+        <td align="right">
           path to data files to supply the data that will be passed into templates.
         </td>
       </tr>
       <tr>
-        <td style="text-align:right">
+        <td align="right">
           engine
         </td>
-        <td style="text-align:right">
+        <td align="right">
           engine to be used for processing templates. Handlebars is the default.
         </td>
       </tr>
       <tr>
-        <td style="text-align:right">
+        <td align="right">
           ext
         </td>
-        <td style="text-align:right">
+        <td align="right">
           extension to be used for dest files.
         </td>
       </tr>
@@ -194,24 +206,9 @@ console.log(foo);</code></pre>
   <h2>Links</h2>
   <p><a href="http://dev.nodeca.com">link text</a></p>
   <p><a href="http://nodeca.github.io/pica/demo/" title="title text!">link with title</a></p>
-  <p>Autoconverted link <a href="https://github.com/nodeca/pica">https://github.com/nodeca/pica</a> (enable linkify to see)</p>
 
 
   <h2>Images</h2>
-  <p>
-    <img
-      src="https://octodex.github.com/images/minion.png"
-      alt="Minion"
-      width="100"
-    >
-    <img
-      src="https://octodex.github.com/images/stormtroopocat.jpg"
-      alt="Stormtroopocat"
-      title="The Stormtroopocat"
-      width="100"
-    >
-  </p>
-  <p>Like links, Images also have a footnote style syntax</p>
   <p>
     <img
       src="https://octodex.github.com/images/dojocat.jpg"
@@ -220,79 +217,14 @@ console.log(foo);</code></pre>
       width="100"
     >
   </p>
-  <p>With a reference later in the document defining the URL location:</p>
-
-
-  <h2>Plugins</h2>
-  <p>
-    The killer feature of <code>markdown-it</code> is very effective support of
-    <a href="https://www.npmjs.org/browse/keyword/markdown-it-plugin">syntax plugins</a>.
-  </p>
-  <h3><a href="https://github.com/markdown-it/markdown-it-emoji">Emojies</a></h3>
-  <blockquote>
-    <p>Classic markup: 😉 😢 😆 😋</p>
-    <p>Shortcuts (emoticons): 😃 😦 😎 😉</p>
-  </blockquote>
-  <p>see <a href="https://github.com/markdown-it/markdown-it-emoji#change-output">how to change output</a> with twemoji.</p>
-  <h3><a href="https://github.com/markdown-it/markdown-it-sub">Subscript</a> / <a href="https://github.com/markdown-it/markdown-it-sup">Superscript</a></h3>
-  <ul>
-    <li>19<sup>th</sup></li>
-    <li>H<sub>2</sub>O</li>
-  </ul>
-  <h3><a href="https://github.com/markdown-it/markdown-it-ins">&lt;ins&gt;</a></h3>
-  <p><ins>Inserted text</ins></p>
-  <h3><a href="https://github.com/markdown-it/markdown-it-mark">&lt;mark&gt;</a></h3>
-  <p><mark>Marked text</mark></p>
-  <h3><a href="https://github.com/markdown-it/markdown-it-footnote">Footnotes</a></h3>
-  <p>Footnote 1 link<sup class="footnote-ref"><a id="fnref1" href="#fn1">[1]</a></sup>.</p>
-  <p>Footnote 2 link<sup class="footnote-ref"><a id="fnref2" href="#fn2">[2]</a></sup>.</p>
-  <p>Inline footnote<sup class="footnote-ref"><a id="fnref3" href="#fn3">[3]</a></sup> definition.</p>
-  <p>Duplicated footnote reference<sup class="footnote-ref"><a id="fnref2:1" href="#fn2">[2:1]</a></sup>.</p>
-  <h3><a href="https://github.com/markdown-it/markdown-it-deflist">Definition lists</a></h3>
-  <dl>
-    <dt>Term 1</dt>
-    <dd>
-      <p>
-        Definition 1
-        with lazy continuation.
-      </p>
-    </dd>
-    <dt>Term 2 with <em>inline markup</em></dt>
-    <dd>
-      <p>Definition 2</p>
-      <pre><code>  { some code, part of Definition 2 }
-</code></pre>
-      <p>Third paragraph of definition 2.</p>
-    </dd>
-  </dl>
-  <p><em>Compact style:</em></p>
-  <dl>
-    <dt>Term 1</dt>
-    <dd>Definition 1</dd>
-    <dt>Term 2</dt>
-    <dd>Definition 2a</dd>
-    <dd>Definition 2b</dd>
-  </dl>
-  <h3><a href="https://github.com/markdown-it/markdown-it-abbr">Abbreviations</a></h3>
-  <p>This is <abbr title="Hyper Text Markup Language">HTML</abbr> abbreviation example.</p>
-  <p>It converts “<abbr title="Hyper Text Markup Language">HTML</abbr>”, but keep intact partial entries like “xxxHTMLyyy” and so on.</p>
-  <h3><a href="https://github.com/markdown-it/markdown-it-container">Custom containers</a></h3>
-  <div class="warning">
-    <p><em>here be dragons</em></p>
-  </div>
-  <hr class="footnotes-sep">
-  <section class="footnotes">
-    <ol class="footnotes-list">
-      <li id="fn1" class="footnote-item">
-        <p>Footnote <strong>can have markup</strong></p>
-        <p>and multiple paragraphs. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-      </li>
-      <li id="fn2" class="footnote-item">
-        <p>Footnote text. <a href="#fnref2" class="footnote-backref">↩︎</a> <a href="#fnref2:1" class="footnote-backref">↩︎</a></p>
-      </li>
-      <li id="fn3" class="footnote-item">
-        <p>Text of inline footnote <a href="#fnref3" class="footnote-backref">↩︎</a></p>
-      </li>
-    </ol>
-  </section>
+  <p>Specifying the theme:</p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+    <img
+      alt="Shows an illustrated sun in light mode and a moon with stars in dark mode."
+      src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png"
+      width="100"
+    >
+  </picture>
 </template>
