@@ -1,8 +1,8 @@
-import { createSSRApp } from 'vue'
+import { createApp } from 'vue'
 import { renderToString } from 'vue/server-renderer'
 
 export function vueToHtmlString(component, data) {
-  const app = createSSRApp(component)
+  const app = createApp(component)
 
   return renderToString(app, data)
 }

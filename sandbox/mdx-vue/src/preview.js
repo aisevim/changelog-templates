@@ -1,7 +1,7 @@
 import { writeFileSync } from 'node:fs'
 
 import { generateMarkdown } from '../../../src/index.js'
-import Markdown from './Markdown.vue'
+import Markdown from './Example.mdx'
 
 async function createPreview(component) {
   const markdown = await generateMarkdown(component)

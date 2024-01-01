@@ -1,0 +1,184 @@
+## Horizontal Rules
+----------
+----------
+----------
+
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+
+## Emphasis
+**This is bold text**
+
+_This is italic text_
+
+~~This is Strikethrough text~~
+
+This is <sub>Subscript</sub> text
+
+This is <sup>Superscript</sup> text
+
+This is _italic and **strong and ~~Strikethrough and <sub>Subscript</sub>~~**_
+
+## Blockquotes
+> This is a blockquote
+>> This is a nested blockquote
+>>> This is a nested nested blockquote
+
+## Code
+`This is inline code`
+
+```
+This is a block of code
+```
+
+```javascript
+const s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+## Lists
+### Unordered
+- Item 1
+- Item 2
+	- Item 2a
+		- Item 2a1
+		- Item 2a2
+- Item 3
+
+### Ordered
+1. Item 1
+1. Item 2
+1. Item 3
+	1. Item 3a
+	1. Item 3b
+
+### Start numbering with offset
+
+55. Item 1
+55. Item 2
+55. Item 3
+
+### Tasks List
+- [x] foo
+  - [ ] bar
+  - [x] baz
+- [ ] bim
+
+### Nested Tasks List
+<dl>
+	<dt>Term 1</dt>
+	<dd>Definition 1</dd>
+	<dt>Term 2</dt>
+	<dd>Definition 2a</dd>
+	<dd>Definition 2b</dd>
+</dl>
+
+## Tables
+
+| Option |	Description |
+| ------ | ------------ |
+| data |	path to data files to supply the data that will be passed into templates. |
+| engine |	engine to be used for processing templates. Handlebars is the default. |
+| ext |	extension to be used for dest files. |
+
+### Aligning text
+
+| Option |	Description |
+| :-----: | -----------: |
+| data |	path to data files to supply the data that will be passed into templates. |
+| engine |	engine to be used for processing templates. \| Handlebars is the default. |
+| ext |	extension to be used for dest files. |
+
+## Links
+[GitHub](http://github.com)
+
+[GitHub with title](http://github.com "GitHub")
+
+http://github.com
+
+## Images
+
+<img
+	src="https://octodex.github.com/images/dojocat.jpg"
+	alt="Alt text"
+	title="The Dojocat"
+	width="100"
+/>
+
+<picture>
+	<source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png" />
+	<source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png" />
+	<img
+		alt="Shows an illustrated sun in light mode and a moon with stars in dark mode."
+		src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png"
+		width="100"
+	/>
+</picture>
+
+## Emoji
+
+:smile:
+:laughing:
+:blush:
+:smiley:
+:smirk:
+:flushed:
+
+## Alertes
+
+> [!NOTE]
+> Highlights information that users should take into account, even when skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+
+
+## Collapses
+
+<details>
+
+<summary>Tips for collapsed sections</summary>
+
+### You can add a header
+
+You can add text within a collapsed section. 
+
+You can add an image or a code block, too.
+
+```html
+<article>
+  <div>
+    <h1>My App</h1>
+  </div>
+</article>
+```
+
+</details>
+
+## Footnotes
+
+Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
+  This is a second line.
