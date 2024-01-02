@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import rehypeHighlight from 'rehype-highlight'
 import remarkEmoji from 'remark-emoji'
 import remarkGfm from 'remark-gfm'
+import remarkMentions from 'remark-mentions'
 import { defineConfig } from 'vite'
 
 const viteConfig = defineConfig({
@@ -12,7 +13,11 @@ const viteConfig = defineConfig({
       enforce: 'pre',
       ...mdx({
         jsxImportSource: 'vue',
-        remarkPlugins: [remarkGfm, remarkEmoji],
+        remarkPlugins: [
+          remarkGfm,
+          remarkEmoji,
+          remarkMentions,
+        ],
         rehypePlugins: [rehypeHighlight],
       }),
     },
