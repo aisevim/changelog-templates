@@ -34,6 +34,9 @@ devDependencies:
   remark-gfm:
     specifier: ^4.0.0
     version: 4.0.0
+  remark-github-blockquote-alert:
+    specifier: ^1.2.0
+    version: 1.2.0
   remark-mentions:
     specifier: ^1.1.0
     version: 1.1.0
@@ -1550,6 +1553,13 @@ packages:
       unified: 11.0.4
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /remark-github-blockquote-alert@1.2.0:
+    resolution: {integrity: sha512-QhMT09MpiGfjINvezNyYxCAayu+URu5+uyVRX1pltTtIlpA3EdOATyb80kKi6x1z2OEnAC1XGfH3FbuA1TofnA==}
+    engines: {node: '>=16'}
+    dependencies:
+      unist-util-visit: 5.0.0
     dev: true
 
   /remark-mdx@3.0.0:

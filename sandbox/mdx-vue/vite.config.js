@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import rehypeHighlight from 'rehype-highlight'
 import remarkEmoji from 'remark-emoji'
 import remarkGfm from 'remark-gfm'
+import { remarkAlert } from 'remark-github-blockquote-alert'
 import remarkMentions from 'remark-mentions'
 import { defineConfig } from 'vite'
 
@@ -17,6 +18,7 @@ const viteConfig = defineConfig({
           remarkGfm,
           remarkEmoji,
           remarkMentions,
+          remarkAlert,
         ],
         rehypePlugins: [rehypeHighlight],
       }),
