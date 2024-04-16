@@ -1,43 +1,6 @@
-:root {
-	--base-size-4: 0.25rem;
-	--base-size-8: 0.5rem;
-	--base-size-12: 0.75rem;
-	--base-size-16: 1rem;
-	--base-size-20: 1.25rem;
-	--base-size-24: 1.5rem;
-	--base-size-28: 1.75rem;
-	--base-size-32: 2rem;
-	--base-size-36: 2.25rem;
-	--base-size-40: 2.5rem;
-	--base-size-44: 2.75rem;
-	--base-size-48: 3rem;
-	--base-size-64: 4rem;
-	--base-size-80: 5rem;
-	--base-size-96: 6rem;
-	--base-size-112: 7rem;
-	--base-size-128: 8rem;
-}
-
-.markdown-body .markdown-alert.markdown-alert-note {
-	fill: var(--color-accent-fg);
-}
-
-.markdown-body .markdown-alert.markdown-alert-tip {
-	fill: var(--color-success-fg);
-}
-
-.markdown-body .markdown-alert.markdown-alert-important {
-	fill: var(--color-done-emphasis);
-}
-
-.markdown-body .markdown-alert.markdown-alert-warning {
-	fill: var(--color-attention-emphasis);
-}
-
-.markdown-body .markdown-alert.markdown-alert-caution {
-	fill: var(--color-danger-emphasis);
-}
-
-.markdown-alert-title svg {
-	margin-right: var(--base-size-8, 8px) !important;
+.markdown-body .markdown-alert {
+	padding: 0.5rem 1rem;
+	margin-bottom: 16px;
+	color: inherit;
+	border-left: 0.25em solid #888;
 }
