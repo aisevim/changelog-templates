@@ -1,6 +1,14 @@
 <script setup>
+import hljs from 'highlight.js'
+import { onMounted } from 'vue'
+
 import MarkdownCommon from './MarkdownCommon.mdx'
 
+onMounted(() => {
+  document.querySelectorAll('pre code').forEach(block => {
+    hljs.highlightElement(block)
+  })
+})
 </script>
 
 <template>
